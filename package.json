@@ -1,11 +1,11 @@
 {
-  "name": "@lowdefy/blocks-template",
-  "version": "1.2.0",
+  "name": "@lowdefy/blocks-amcharts",
+  "version": "3.1.1",
   "license": "Apache-2.0",
-  "description": "A template example for Lowdefy blocks.",
+  "description": "Lowdefy blocks for AmCharts.",
   "homepage": "https://lowdefy.com",
   "bugs": {
-    "url": "https://github.com/lowdefy/blocks-template/issues"
+    "url": "https://github.com/lowdefy/blocks-amcharts/issues"
   },
   "contributors": [
     {
@@ -36,6 +36,7 @@
     "test": "jest --coverage --config jest.config.js --no-cache"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "4.10.12",
     "@lowdefy/block-tools": "3.1.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"

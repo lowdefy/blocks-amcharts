@@ -1,0 +1,45 @@
+- id: default
+  type: AmChartsPie
+- id: basic
+  type: AmChartsPie
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    series:
+      - type: PieSeries
+        dataFields:
+          category: name
+          value: count
+- id: onClick action
+  type: AmChartsPie
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    series:
+      - type: PieSeries
+        dataFields:
+          category: name
+          value: count
+        events:
+          hit:
+            _amcharts_action: 
+              name: onClick
+              log: true
+
+
