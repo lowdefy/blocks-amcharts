@@ -1,0 +1,19 @@
+- id: default
+  type: DisplayBlock
+- id: property.title
+  type: DisplayBlock
+  properties:
+    title: Foo
+- id: property.style
+  type: DisplayBlock
+  properties:
+    style: 
+      color: red
+- id: actions.onClick
+  type: DisplayBlock
+  actions:
+    onClick:
+      - id: one
+        type: Test
+  
+

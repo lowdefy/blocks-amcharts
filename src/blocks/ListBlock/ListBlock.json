@@ -1,0 +1,41 @@
+{
+  "category": "list",
+  "valueType": "array",
+  "loading": false,
+  "test": {
+    "methods": [
+      {
+        "name": "pushItem",
+        "args": {}
+      },
+      {
+        "name": "unshiftItem",
+        "args": {}
+      },
+      {
+        "name": "removeItem",
+        "args": 0
+      },
+      {
+        "name": "moveItemDown",
+        "args": 0
+      },
+      {
+        "name": "moveItemUp",
+        "args": 1
+      }
+    ]
+  },
+  "schema": {
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "itemTitle": {
+          "type": "string",
+          "description": "Custom item title."
+        }
+      }
+    }
+  }
+}

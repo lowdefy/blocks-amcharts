@@ -1,0 +1,37 @@
+- id: default
+  type: ContextBlock
+- id: property.title
+  type: ContextBlock
+  properties:
+    title: Foo Title
+- id: property.style
+  type: ContextBlock
+  properties:
+    title: Red Title
+    style: 
+      color: red
+- id: actions.onClick
+  type: ContextBlock
+  properties:
+    title: Click Me
+  actions:
+    onClick:
+      - id: one
+        type: Test
+- id: properties.content
+  type: ContextBlock
+  properties:
+    content: Foo Content
+- id: blocks
+  type: ContextBlock
+  blocks:
+    - id: one 
+      type: Test
+- id: areas.content
+  type: ContextBlock
+  areas:
+    content:
+      blocks:
+        - id: two 
+          type: Test
+

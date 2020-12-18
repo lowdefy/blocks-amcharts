@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render areas.content - value[0] 1`] = `
+<div
+  data-testid="areas.content"
+  id="areas.content"
+  style={
+    Object {
+      "border": "1px solid blue",
+    }
+  }
+>
+  <button
+    data-testid="areas.content-pushItem"
+    onClick={[MockFunction]}
+  >
+    pushItem
+  </button>
+  <div>
+    <h4>
+      Item Title
+       
+      0
+      <div>
+        <button
+          data-testid="areas.content-removeItem-0"
+          onClick={[Function]}
+        >
+          removeItem
+        </button>
+         
+        <button
+          data-testid="areas.content-moveItemUp-0"
+          onClick={[Function]}
+        >
+          moveItemUp
+        </button>
+         
+        <button
+          data-testid="areas.content-moveItemDown-0"
+          onClick={[Function]}
+        >
+          moveItemDown
+        </button>
+      </div>
+    </h4>
+    <div>
+      <div
+        style={
+          Object {
+            "border": "1px solid red",
+            "padding": 10,
+          }
+        }
+      >
+        two
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>
+      Item Title
+       
+      1
+      <div>
+        <button
+          data-testid="areas.content-removeItem-1"
+          onClick={[Function]}
+        >
+          removeItem
+        </button>
+         
+        <button
+          data-testid="areas.content-moveItemUp-1"
+          onClick={[Function]}
+        >
+          moveItemUp
+        </button>
+         
+        <button
+          data-testid="areas.content-moveItemDown-1"
+          onClick={[Function]}
+        >
+          moveItemDown
+        </button>
+      </div>
+    </h4>
+    <div>
+      <div
+        style={
+          Object {
+            "border": "1px solid red",
+            "padding": 10,
+          }
+        }
+      >
+        two
+      </div>
+    </div>
+  </div>
+  <button
+    data-testid="areas.content-unshiftItem"
+    onClick={[MockFunction]}
+  >
+    unshiftItem
+  </button>
+</div>
+`;
+
+exports[`Render blocks - value[0] 1`] = `
+<div
+  data-testid="blocks"
+  id="blocks"
+  style={
+    Object {
+      "border": "1px solid blue",
+    }
+  }
+>
+  <button
+    data-testid="blocks-pushItem"
+    onClick={[MockFunction]}
+  >
+    pushItem
+  </button>
+  <div>
+    <h4>
+      Item Title
+       
+      0
+      <div>
+        <button
+          data-testid="blocks-removeItem-0"
+          onClick={[Function]}
+        >
+          removeItem
+        </button>
+         
+        <button
+          data-testid="blocks-moveItemUp-0"
+          onClick={[Function]}
+        >
+          moveItemUp
+        </button>
+         
+        <button
+          data-testid="blocks-moveItemDown-0"
+          onClick={[Function]}
+        >
+          moveItemDown
+        </button>
+      </div>
+    </h4>
+    <div>
+      <div
+        style={
+          Object {
+            "border": "1px solid red",
+            "padding": 10,
+          }
+        }
+      >
+        one
+      </div>
+    </div>
+  </div>
+  <button
+    data-testid="blocks-unshiftItem"
+    onClick={[MockFunction]}
+  >
+    unshiftItem
+  </button>
+</div>
+`;
+
+exports[`Render default - value[0] 1`] = `
+<div
+  data-testid="default"
+  id="default"
+  style={
+    Object {
+      "border": "1px solid blue",
+    }
+  }
+>
+  <button
+    data-testid="default-pushItem"
+    onClick={[MockFunction]}
+  >
+    pushItem
+  </button>
+  <button
+    data-testid="default-unshiftItem"
+    onClick={[MockFunction]}
+  >
+    unshiftItem
+  </button>
+</div>
+`;
+
+exports[`Render property.itemTitle - value[0] 1`] = `
+<div
+  data-testid="property.itemTitle"
+  id="property.itemTitle"
+  style={
+    Object {
+      "border": "1px solid blue",
+    }
+  }
+>
+  <button
+    data-testid="property.itemTitle-pushItem"
+    onClick={[MockFunction]}
+  >
+    pushItem
+  </button>
+  <div>
+    <h4>
+      Foo Item Title
+       
+      0
+      <div>
+        <button
+          data-testid="property.itemTitle-removeItem-0"
+          onClick={[Function]}
+        >
+          removeItem
+        </button>
+         
+        <button
+          data-testid="property.itemTitle-moveItemUp-0"
+          onClick={[Function]}
+        >
+          moveItemUp
+        </button>
+         
+        <button
+          data-testid="property.itemTitle-moveItemDown-0"
+          onClick={[Function]}
+        >
+          moveItemDown
+        </button>
+      </div>
+    </h4>
+    <div>
+      <div
+        style={
+          Object {
+            "border": "1px solid red",
+            "padding": 10,
+          }
+        }
+      >
+        one
+      </div>
+    </div>
+  </div>
+  <button
+    data-testid="property.itemTitle-unshiftItem"
+    onClick={[MockFunction]}
+  >
+    unshiftItem
+  </button>
+</div>
+`;
+
+exports[`Test Schema areas.content 1`] = `true`;
+
+exports[`Test Schema areas.content 2`] = `null`;
+
+exports[`Test Schema blocks 1`] = `true`;
+
+exports[`Test Schema blocks 2`] = `null`;
+
+exports[`Test Schema default 1`] = `true`;
+
+exports[`Test Schema default 2`] = `null`;
+
+exports[`Test Schema property.itemTitle 1`] = `true`;
+
+exports[`Test Schema property.itemTitle 2`] = `null`;

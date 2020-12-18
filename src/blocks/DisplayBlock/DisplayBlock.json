@@ -1,0 +1,29 @@
+{
+  "category": "display",
+  "loading": false,
+  "schema": {
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title to render in DisplayBlock."
+        },
+        "style": {
+          "type": "object",
+          "description": "Style to apply to Box div."
+        }
+      }
+    },
+    "actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onClick": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}
