@@ -1,0 +1,9 @@
+{
+  "category": "display",
+  "loading": false,
+  "schema": {
+    "properties": {
+      "type": "object"
+    }
+  }
+}

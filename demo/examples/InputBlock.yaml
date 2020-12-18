@@ -1,6 +1,0 @@
-- id: default
-  type: InputBlock
-- id: properties.label
-  type: InputBlock
-  properties:
-    label: Input Foo Label

@@ -1,0 +1,60 @@
+- id: default
+  type: AmChartsXY
+- id: basic
+  type: AmChartsXY
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    xAxes:
+      - type: CategoryAxis
+        dataFields:
+          category: name
+    yAxes:
+      - type: ValueAxis
+    series:
+      - type: ColumnSeries
+        dataFields:
+          categoryX: name
+          valueY: count 
+
+- id: with action
+  type: AmChartsXY
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    xAxes:
+      - type: CategoryAxis
+        dataFields:
+          category: name
+    yAxes:
+      - type: ValueAxis
+    series:
+      - type: ColumnSeries
+        dataFields:
+          categoryX: name
+          valueY: count 
+        columns:
+          events:
+            hit:
+              _amcharts_action: 
+                name: onClick
+                log: true
+
+  
+
