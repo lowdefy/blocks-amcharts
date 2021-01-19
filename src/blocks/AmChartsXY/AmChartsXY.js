@@ -1,5 +1,5 @@
 import React from 'react';
-import { type, ge, set } from '@lowdefy/helpers';
+import { type, get, set } from '@lowdefy/helpers';
 import { blockDefaultProps } from '@lowdefy/block-tools';
 
 import * as am4core from '@amcharts/amcharts4/core';
