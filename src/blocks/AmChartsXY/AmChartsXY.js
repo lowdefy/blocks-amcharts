@@ -63,9 +63,10 @@ class AmChartsXYBlock extends React.Component {
   }
 
   addListeners(obj) {
+    // EXPERIMENTAL: The events listener implementation might change in future versions.
     function reviver(key, value) {
-      if (type.isObject(value) && value._amcharts_action) {
-        return this.createEventListener(value._amcharts_action);
+      if (type.isObject(value) && value._amcharts_event_listener) {
+        return this.createEventListener(value._amcharts_event_listener);
       }
       return value;
     }
@@ -84,9 +85,9 @@ class AmChartsXYBlock extends React.Component {
           set(args, key, get(event, key));
         });
       }
-      this.props.methods.callAction({
-        action: name,
-        args,
+      this.props.methods.triggerEvent({
+        name,
+        event: args,
       });
     }
     return eventHandler.bind(this);

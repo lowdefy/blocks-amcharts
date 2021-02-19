@@ -14,7 +14,7 @@
   limitations under the License.
 */
 
-import { runBlockSchemaTests, runRenderTests } from '@lowdefy/block-tools';
+import { runBlockSchemaTests } from '@lowdefy/block-tools';
 
 // import { AmChartsPie } from '../src';
 import examples from '../demo/examples/AmChartsPie.yaml';
