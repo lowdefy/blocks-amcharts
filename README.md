@@ -11,12 +11,14 @@ See the [AmCharts docs](https://www.amcharts.com/docs/v4/) for the chart setting
 
 ### AmChartsPie Example
 
+Block URL: `https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsPie.json`
+
 ```yaml
 name: my-app
 lowdefy: 3.10.0
 types:
   AmChartsXY:
-    url: https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsXY.json
+    url: https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsPie.json
 pages:
   - id: dashboard
     type: PageHeaderMenu
@@ -42,6 +44,8 @@ pages:
 ```
 
 ### AmChartsXY Example
+
+Block URL: `https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsXY.json`
 
 ```yaml
 name: my-app
