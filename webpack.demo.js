@@ -7,17 +7,19 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const packageJson = require('./package.json');
 
-const sanitizeName = (name) => {
-  return name
-    .replace('@', '_at_')
-    .replace('/', '_slash_')
-    .replace('-', '_dash_')
-    .replace(/^[a-zA-Z0-9_]/g, '_');
-};
-
-const port = type.isNumber(process.argv[process.argv.findIndex((val) => val === '--port') + 1])
+const port = Number.isInteger(
+  Number(process.argv[process.argv.findIndex((val) => val === '--port') + 1])
+)
   ? process.argv[process.argv.findIndex((val) => val === '--port') + 1]
   : 3002;
+
+const sanitizeName = (name) => {
+  return name
+    .replace(/@/g, '_at_')
+    .replace(/\//g, '_slash_')
+    .replace(/-/g, '_dash_')
+    .replace(/^[a-zA-Z0-9_]/g, '_');
+};
 
 const addRemoteEntryUrl = (content, absoluteFrom) => {
   const scope = sanitizeName(packageJson.name);
@@ -45,8 +47,8 @@ module.exports = merge(common, {
       patterns: [
         {
           from: 'src/blocks/**/*.json',
-          transformPath: (targetPath) => {
-            return path.join('meta', path.basename(targetPath));
+          to: ({ absoluteFilename }) => {
+            return path.join('meta', path.basename(absoluteFilename));
           },
           transform: addRemoteEntryUrl,
         },

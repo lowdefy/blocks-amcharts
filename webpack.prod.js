@@ -7,9 +7,9 @@ const packageJson = require('./package.json');
 
 const sanitizeName = (name) => {
   return name
-    .replace('@', '_at_')
-    .replace('/', '_slash_')
-    .replace('-', '_dash_')
+    .replace(/@/g, '_at_')
+    .replace(/\//g, '_slash_')
+    .replace(/-/g, '_dash_')
     .replace(/^[a-zA-Z0-9_]/g, '_');
 };
 
@@ -22,7 +22,7 @@ const addRemoteEntryUrl = (content, absoluteFrom) => {
       module: path.basename(absoluteFrom, '.json'),
       scope,
       version: packageJson.version,
-      remoteEntryUrl: `https://unpkg.com/${packageJson.name}@${packageJson.version}/dist/remoteEntry.js`,
+      remoteEntryUrl: `https://blocks-cdn.lowdefy.com/v${packageJson.version}/blocks-amcharts/remoteEntry.js`,
     };
   }
   return JSON.stringify(meta);
