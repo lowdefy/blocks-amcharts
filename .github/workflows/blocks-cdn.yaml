@@ -20,7 +20,7 @@ jobs:
         run: yarn
       - name: Build all
         run: yarn build
-      - name: Upload blocks-cdn.lowdefy.com/blocks-basic
+      - name: Upload blocks-cdn.lowdefy.com/blocks-amcharts
         run: |
           aws --region eu-west-1 s3 sync dist s3://blocks-cdn.lowdefy.com/${{ github.event.release.tag_name }}/blocks-amcharts --acl public-read --cache-control 'public, max-age=31536000'
         env:
