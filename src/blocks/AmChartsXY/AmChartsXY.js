@@ -1,5 +1,5 @@
 import React from 'react';
-import { type, get, set } from '@lowdefy/helpers';
+import { type, get } from '@lowdefy/helpers';
 import { blockDefaultProps } from '@lowdefy/block-tools';
 
 import * as am4core from '@amcharts/amcharts4/core';
@@ -63,31 +63,36 @@ class AmChartsXYBlock extends React.Component {
   }
 
   addListeners(obj) {
+    if (type.isUndefined(obj)) return obj;
     // EXPERIMENTAL: The events listener implementation might change in future versions.
+    const fns = {};
     function reviver(key, value) {
-      if (type.isObject(value) && value._amcharts_event_listener) {
-        return this.createEventListener(value._amcharts_event_listener);
+      if (type.isObject(value) && value.amcharts_event_listener) {
+        return this.createEventListener(value.amcharts_event_listener);
+      }
+      if (type.isString(value) && value.includes('___fn:0.')) {
+        return (_, args) => fns[value](get(args, 'dataItem.dataContext'));
       }
       return value;
     }
-    if (type.isUndefined(obj)) return obj;
-    return JSON.parse(JSON.stringify(obj), reviver.bind(this));
+    function replacer(_, val) {
+      if (typeof val === 'function') {
+        const fnId = `___fn:${Math.random().toString(36)}`;
+        fns[fnId] = val;
+        return fnId;
+      }
+      return val;
+    }
+    // Revive in order to add event listeners,
+    // and map functions to support _function adapters.
+    return JSON.parse(JSON.stringify(obj, replacer), reviver.bind(this));
   }
 
-  createEventListener({ name, log, eventKeys }) {
+  createEventListener({ name }) {
     function eventHandler(event) {
-      if (log) {
-        console.log(event);
-      }
-      const args = {};
-      if (type.isArray(eventKeys)) {
-        eventKeys.forEach((key) => {
-          set(args, key, get(event, key));
-        });
-      }
       this.props.methods.triggerEvent({
         name,
-        event: args,
+        event: get(event, 'target.dataItem.dataContext'),
       });
     }
     return eventHandler.bind(this);

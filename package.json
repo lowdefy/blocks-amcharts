@@ -1,6 +1,6 @@
 {
   "name": "@lowdefy/blocks-amcharts",
-  "version": "3.10.0",
+  "version": "3.10.1",
   "license": "Apache-2.0",
   "description": "Lowdefy blocks for AmCharts.",
   "homepage": "https://lowdefy.com",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@amcharts/amcharts4": "4.10.15",
-    "@lowdefy/block-tools": "3.10.0",
+    "@lowdefy/block-tools": "3.10.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
@@ -46,7 +46,7 @@
     "@babel/core": "7.12.16",
     "@babel/preset-env": "7.12.16",
     "@babel/preset-react": "7.12.13",
-    "@lowdefy/helpers": "3.10.0",
+    "@lowdefy/helpers": "3.10.1",
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
     "buffer": "6.0.3",

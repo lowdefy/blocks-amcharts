@@ -11,14 +11,14 @@ See the [AmCharts docs](https://www.amcharts.com/docs/v4/) for the chart setting
 
 ### AmChartsPie Example
 
-Block URL: `https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsPie.json`
+Block URL: `https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsPie.json`
 
 ```yaml
 name: my-app
-lowdefy: 3.10.0
+lowdefy: 3.10.1
 types:
   AmChartsXY:
-    url: https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsPie.json
+    url: https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsPie.json
 pages:
   - id: dashboard
     type: PageHeaderMenu
@@ -45,14 +45,14 @@ pages:
 
 ### AmChartsXY Example
 
-Block URL: `https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsXY.json`
+Block URL: `https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsXY.json`
 
 ```yaml
 name: my-app
-lowdefy: 3.10.0
+lowdefy: 3.10.1
 types:
   AmChartsXY:
-    url: https://blocks-cdn.lowdefy.com/v3.10.0/blocks-antd/meta/AmChartsXY.json
+    url: https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsXY.json
 pages:
   - id: dashboard
     type: PageHeaderMenu
@@ -83,32 +83,42 @@ pages:
               columns:
                 events:
                   hit: # EXPERIMENTAL: create a chart event listener which will trigger the onClick Lowdefy event when the chart column is clicked.
-                    _amcharts_event_listener:
+                    amcharts_event_listener:
                       name: onClick
-                      log: false # set log to true to log the events to inspect in the console.
-                      eventKeys: # Select keys from the AmCharts click event to pass to the _event operator.
-                        - target.dataItem.name
-                        - target.dataItem.count
                 adapter:
                   fill: # Use the _function operator to change the column color based on the value.
                     _function:
                       __if:
                         test:
                           __lte:
-                            - __args: 0.dataItem.valueY
+                            - __args: '0.count'
                             - 50
                         then: '#F00'
                         else: '#0F0'
-    actions:
-      onClick:
-        - id: on_chart_click
-          type: SetState
-          params: # Set the clicked data to selected in state
-            selected:
-              name:
-                _event: target.dataItem.name
-              count:
-                _event: target.dataItem.count
+        events:
+          onClick:
+            - id: set_selected
+              type: SetState
+              params:
+                selected: # Update 'selected' in state with the event data.
+                  _event: true
+      - id: selection
+        type: Title
+        properties:
+          level: 4
+          content:
+            _if: # Show the event data in a title, or call to action.
+              test:
+                _eq:
+                  - _state: selected
+                  - null
+              then: ' Click to select a column.'
+              else:
+                _string.concat:
+                  - 'Selected: '
+                  - _state: selected.name
+                  - ', Value: '
+                  - _state: selected.count
 ```
 
 ## Other Lowdefy Blocks Packages
