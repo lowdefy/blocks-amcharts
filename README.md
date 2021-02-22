@@ -112,7 +112,7 @@ pages:
                 _eq:
                   - _state: selected
                   - null
-              then: ' Click to select a column.'
+              then: 'Click to select a column.'
               else:
                 _string.concat:
                   - 'Selected: '
@@ -128,6 +128,7 @@ pages:
 - [@lowdefy/blocks-antd](https://github.com/lowdefy/lowdefy/tree/main/packages/blocks/blocksAntd): Official Lowdefy blocks for [Antd design](https://ant.design/).
 - [@lowdefy/blocks-color-selectors](https://github.com/lowdefy/lowdefy/tree/main/packages/blocks/blocksColorSelectorsd): Official Lowdefy blocks for [react-color](https://casesandberg.github.io/react-color/).
 - [@lowdefy/blocks-markdown](https://github.com/lowdefy/lowdefy/tree/main/packages/blocks/blocksMarkdown): Official Lowdefy blocks to render Markdown.
+- [@lowdefy/blocks-aggrid](https://github.com/lowdefy/blocks-aggrid): Lowdefy blocks to render [Ag-Grid](https://www.ag-grid.com/) tables.
 
 ## More Lowdefy resources
 
