@@ -15,7 +15,8 @@
 */
 
 import AmChartsPie from './blocks/AmChartsPie/AmChartsPie';
+import AmChartsTreeMap from './blocks/AmChartsTreeMap/AmChartsTreeMap';
 import AmChartsXY from './blocks/AmChartsXY/AmChartsXY';
 
-export { AmChartsPie, AmChartsXY };
-export default { AmChartsPie, AmChartsXY };
+export { AmChartsPie, AmChartsTreeMap, AmChartsXY };
+export default { AmChartsPie, AmChartsTreeMap, AmChartsXY };
