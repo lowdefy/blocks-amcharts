@@ -18,7 +18,7 @@ import { runBlockSchemaTests } from '@lowdefy/block-tools';
 
 // import { AmChartsTreeMap } from '../src';
 import examples from '../demo/examples/AmChartsTreeMap.yaml';
-import meta from '../src/blocks/AmChartsPie/AmChartsTreeMap.json';
+import meta from '../src/blocks/AmChartsTreeMap/AmChartsTreeMap.json';
 
 // FIX: Error
 // /Users/gerrie/GitHub/blocks-amcharts/.yarn/cache/@amcharts-amcharts4-npm-4.10.12-4f2b3b0985-7d15767950.zip/node_modules/@amcharts/amcharts4/core.js:8
