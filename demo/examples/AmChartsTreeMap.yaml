@@ -1,0 +1,86 @@
+- id: default
+  type: AmChartsTreeMap
+- id: basic
+  type: AmChartsTreeMap
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    dataFields:
+      value: count
+      name: name
+- id: multi-level
+  type: AmChartsTreeMap
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        children:
+          - name: 'A1'
+            count: 1
+          - name: 'A2'
+            count: 2
+          - name: 'A3'
+            count: 3
+          - name: 'A4'
+            count: 4
+      - name: 'B'
+        children:
+          - name: 'B1'
+            count: 5
+          - name: 'B2'
+            count: 10
+          - name: 'B3'
+            count: 15
+      - name: 'C'
+        children:
+          - name: 'C1'
+            count: 5
+          - name: 'C2'
+            count: 10
+          - name: 'C3'
+            count: 15
+          - name: 'C4'
+            count: 30
+      - name: 'D'
+        children:
+          - name: 'D1'
+            count: 10
+          - name: 'D2'
+            count: 30
+          - name: 'D3'
+            count: 50
+    dataFields:
+      name: name
+      children: children
+      value: count
+- id: onClick action
+  type: AmChartsTreeMap
+  properties:
+    height: 400
+    data: 
+      - name: 'A'
+        count: 10
+      - name: 'B'
+        count: 30
+      - name: 'C'
+        count: 60
+      - name: 'D'
+        count: 90
+    dataFields:
+      value: count
+      name: name
+    events:
+      hit:
+        _amcharts_action: 
+          name: onClick
+          log: true
+
+

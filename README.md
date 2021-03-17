@@ -11,14 +11,14 @@ See the [AmCharts docs](https://www.amcharts.com/docs/v4/) for the chart setting
 
 ### AmChartsPie Example
 
-Block URL: `https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsPie.json`
+Block URL: `https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsPie.json`
 
 ```yaml
 name: my-app
-lowdefy: 3.10.1
+lowdefy: 3.11.3
 types:
   AmChartsXY:
-    url: https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsPie.json
+    url: https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsPie.json
 pages:
   - id: dashboard
     type: PageHeaderMenu
@@ -45,14 +45,14 @@ pages:
 
 ### AmChartsXY Example
 
-Block URL: `https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsXY.json`
+Block URL: `https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsXY.json`
 
 ```yaml
 name: my-app
-lowdefy: 3.10.1
+lowdefy: 3.11.3
 types:
   AmChartsXY:
-    url: https://blocks-cdn.lowdefy.com/v3.10.1/blocks-amcharts/meta/AmChartsXY.json
+    url: https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsXY.json
 pages:
   - id: dashboard
     type: PageHeaderMenu
@@ -119,6 +119,38 @@ pages:
                   - _state: selected.name
                   - ', Value: '
                   - _state: selected.count
+```
+
+### AmChartsTreeMap Example
+
+Block URL: `https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsTreeMap.json`
+
+```yaml
+name: my-app
+lowdefy: 3.11.3
+types:
+  AmChartsTreeMap:
+    url: https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsTreeMap.json
+pages:
+  - id: dashboard
+    type: PageHeaderMenu
+    blocks:
+      - id: my_chart
+        type: AmChartsTreeMap
+        properties:
+          height: 400 # The default height is 500px.
+          data: # This will usually be data from a request, so use the  _request operator.
+            - name: 'A'
+              value: 10
+            - name: 'B'
+              value: 30
+            - name: 'C'
+              value: 60
+            - name: 'D'
+              value: 90
+          dataFields:
+            name: name
+            value: value
 ```
 
 ## Other Lowdefy Blocks Packages
