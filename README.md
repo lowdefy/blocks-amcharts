@@ -17,7 +17,7 @@ Block URL: `https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmCharts
 name: my-app
 lowdefy: 3.11.3
 types:
-  AmChartsXY:
+  AmChartsPie:
     url: https://blocks-cdn.lowdefy.com/v3.11.3/blocks-amcharts/meta/AmChartsPie.json
 pages:
   - id: dashboard
